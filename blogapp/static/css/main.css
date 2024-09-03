@@ -1,0 +1,92 @@
+/* Main CSS */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-name {
+    font-size: 1.5em;
+}
+
+.hamburger {
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.dashboard {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: left 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dashboard.active {
+    left: 0;
+}
+
+.dashboard h3 {
+    margin-bottom: 20px;
+}
+
+.dashboard ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dashboard ul li {
+    margin-bottom: 10px;
+}
+
+.dashboard ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.dashboard ul li a:hover {
+    text-decoration: underline;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+
+.logout {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.logout button {
+    background-color: #94817b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.logout button:hover {
+    background-color: #7a6f69;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 style="text-align: center;">THE BLOG ZONE</h1>
+        </div>
+        <div class="button-container">
+            <a href="{% url 'login' %}">Login</a>
+            <a href="{% url 'register' %}">Register</a>
+        </div>
+    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>THE BLOG ZONE</h1>
+            <div class="info-box">
+                <p>
+                    "The first draft is just you telling yourself the story."
+                    <br> – Terry Pratchett
+                </p>
+            </div>
+            <div class="info-box2">
+                <p class="p">
+                    Welcome to The Blog Zone, your ultimate destination for exploring a universe of ideas, stories, and insights across a multitude of categories.
+                    From technology and travel to health, lifestyle, and beyond, our platform is dedicated to bringing you the best content from every corner of the blogosphere.
+                    Whether you're here to learn something new, find inspiration, or simply indulge in captivating reads, we've got you covered.
+                    Join our vibrant community of writers and readers as we delve into thought-provoking discussions, share expert advice, and celebrate the diversity of perspectives that make our world so fascinating. 
+                </p>
+            </div>
+            <div class="hero-image">
+                <img src="{% static 'img/im1.jpeg' %}" alt="Image">
+            </div>
+        </div>
+    </section>
+    <section id="about" class="content">
+        <h2>About Us</h2>
+        <p class="p1">
+            We believe in the power of sharing ideas, stories, and experiences. Our platform is dedicated to providing a diverse range of content that informs, inspires, and entertains. Whether you're passionate about travel, technology, lifestyle, or creative pursuits, you'll find something here to pique your interest.
+            At The Blog Zone, we strive to create a community where voices from all backgrounds can be heard. From insightful articles and helpful tips to thought-provoking opinion pieces and captivating stories, our goal is to enrich your online experience and foster meaningful connections.
+            Join us on this journey as we explore the world through words. Whether you're a seasoned blogger or just starting out, there's a place for you here. We encourage you to explore our diverse categories, engage with our content, and share your own unique perspective with our community.
+            </p>
+    </section>
+    <section id="services"  class="content">
+        <h2>Get Started</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="{% static 'img/card1.jpeg' %}" alt="Card image" class="card-image">
+                <h3 class="card-title">TECH RADAR</h3>
+                <p class="card-description">Technology and Gadgets.</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/card2.jpeg' %}" alt="Card image" class="card-image">
+                <h3 class="card-title">THE LITERARY LOUNGE</h3>
+                <p class="card-description">Books and Literature.</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/card3.jpeg' %}" alt="Card image" class="card-image">
+                <h3 class="card-title">ROAMING ROUTES</h3>
+                <p class="card-description">Travel and Adventure.</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/card4.jpeg' %}" alt="Card image" class="card-image">
+                <h3 class="card-title">CULINARY CHRONICLES</h3>
+                <p class="card-description">Food and Cooking.</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/card5.jpeg' %}" alt="Card image" class="card-image">
+                <h3 class="card-title">PENS & PERSPECTIVES</h3>
+                <p class="card-description">Personal Development and Self-Improvement</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/card6.jpg' %}" alt="Card image" class="card-image">
+                <h3 class="card-title">HOME & HEART</h3>
+                <p class="card-description">Parenting, Family and Relationships.</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/card7.jpeg' %}" alt="Card image" class="card-image">
+                <h3 class="card-title">TRADE TALK</h3>
+                <p class="card-description">Businnes, Entrepreneurship and Startups.</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/card8.jpeg' %}" alt="Card image" class="card-image">
+                <h3 class="card-title">LEARN LOOP</h3>
+                <p class="card-description">Education and Learning.</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/card9.jpg' %}" alt="Card image" class="card-image">
+                <h3 class="card-title">FITFOLIO</h3>
+                <p class="card-description">Health and Fitness.</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/card10.jpg' %}" alt="Card image" class="card-image">
+                <h3 class="card-title">GLAM GAZETTE</h3>
+                <p class="card-description">Fashion and Beauty.</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/card11.jpg' %}" alt="Card image" class="card-image">
+                <h3 class="card-title">PLAYBOOK PORTAL</h3>
+                <p class="card-description">Sports and Outdoor Activities.</p>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/card12.jpg' %}" alt="Card image" class="card-image">
+                <h3 class="card-title">SHUTTER STORIES</h3>
+                <p class="card-description">Photography and Visual Arts.</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="content">
+        <h2>Contact Us</h2>
+        <p>Have a question or suggestion? We'd love to hear from you!
+            <br> Connect us at: theblogzone@gmail.com
+        </p>
+    </section>
+</body>
+</html>
