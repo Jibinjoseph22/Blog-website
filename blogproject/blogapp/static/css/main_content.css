@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #658354;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 20px 60px;
+    background-color: whitesmoke;
+    margin-top: 10px; /* Adjust based on header height */
+}
+
+.hero-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.info-box-container {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between; /* Space items evenly */
+    margin: 20px 0;
+}
+
+.info-box-group {
+    display: flex;
+    flex-direction: column; /* Stack boxes vertically */
+    flex: 1;
+}
+
+.info-box, .info-box2, .info-box3 {
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    background-color: beige;
+    font-style: italic;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.info-box {
+    background-color: #efefef;
+}
+
+.info-box2 {
+    background-color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 20px; /* Increase padding for larger box */
+    margin: 10px; /* Add margin if needed */
+    line-height: 1.6; /* Increase line height for more space between lines */
+    font-size: 16px; /* Increase font size if needed */
+}
+
+
+.info-box3 {
+    background-color: #f5f5f5; /* Slightly different color for distinction */
+}
+
+.info-image {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (min-width: 600px) {
+    .hero {
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .hero-content {
+        flex: 1;
+    }
+
+    .info-box-container {
+        flex-direction: row;
+    }
+
+    .info-box-group {
+        flex-direction: column;
+        margin-left: 20px;
+    }
+
+    .info-box2 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 900px) {
+    .card-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 22%;
+    }
+}

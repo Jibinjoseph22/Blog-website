@@ -1,0 +1,79 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: beige;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+/* Button styling */
+.button-link, .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-link {
+    background-color: transparent;
+    color: #658354;
+    border: 1px solid #658354;
+}
+
+.button-link:hover {
+    background-color: #658354;
+    color: white;
+}
+
+.btn {
+    background-color: #658354;
+    color: white;
+}
+
+.btn:hover {
+    background-color: black;
+
+}
+
+/* Button container styling */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Blog content styling */
+.blog-content {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}

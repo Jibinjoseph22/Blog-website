@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px 0;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    width: 80%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin: 16px 0;
+}
+
+.card-description {
+    font-size: 1em;
+    padding: 0 16px 16px;
+    color: #666;
+}
+
+@media (min-width: 900px) {
+    .card-container {
+        justify-content: space-between;
+    }
+
+    .card {
+        width: 22%;
+    }
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: white;
+    background-color: #658354; /* Primary button color */
+}
+
+.btn:hover {
+    background-color: black; /* Hover color */
+    color: white;
+}
+
+/* Button link styling */
+.button-link {
+    background-color: transparent;
+    color: #658354;
+    border: 1px solid #658354;
+}
+
+.button-link:hover {
+    background-color: #658354;
+    color: white;
+}

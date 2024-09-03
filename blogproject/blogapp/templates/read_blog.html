@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Blog Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/read_blog.css' %}">
+</head>
+<body>
+    <section id="services" class="content">
+        <h2>READ & ROAM</h2>
+        <div class="card-container">
+            <div class="card">
+                <a href="{% url 'category_blogs' 'technology' %}" class="card-image-link">
+                    <img src="{% static 'img/card1.jpeg' %}" alt="Card image" class="card-image">
+                </a>
+                <h3 class="card-title">TECH RADAR</h3>
+                <p class="card-description">Technology and Gadgets.</p>
+            </div>
+            <div class="card">
+                <a href="{% url 'category_blogs' 'literacy' %}" class="card-image-link">
+                    <img src="{% static 'img/card2.jpeg' %}" alt="Card image" class="card-image">
+                </a>
+                <h3 class="card-title">THE LITERACY LOUNGE</h3>
+                <p class="card-description">Books and Literature.</p>
+            </div>
+            <div class="card">
+                <a href="{% url 'category_blogs' 'travel' %}" class="card-image-link">
+                    <img src="{% static 'img/card3.jpeg' %}" alt="Card image" class="card-image">
+                </a>
+                <h3 class="card-title">ROAMING ROUTES</h3>
+                <p class="card-description">Travel and Adventure.</p>
+            </div>
+            <div class="card">
+                <a href="{% url 'category_blogs' 'food' %}" class="card-image-link">
+                    <img src="{% static 'img/card4.jpeg' %}" alt="Card image" class="card-image">
+                </a>
+                <h3 class="card-title">CULINARY CHRONICLES</h3>
+                <p class="card-description">Food and Cooking.</p>
+            </div>
+            <div class="card">
+                <a href="{% url 'category_blogs' 'personal' %}" class="card-image-link">
+                    <img src="{% static 'img/card5.jpeg' %}" alt="Card image" class="card-image">
+                </a>
+                <h3 class="card-title">PENS & PERSPECTIVES</h3>
+                <p class="card-description">Personal Development and Self-Improvement</p>
+            </div>
+            <div class="card">
+                <a href="{% url 'category_blogs' 'business' %}" class="card-image-link">
+                    <img src="{% static 'img/card7.jpeg' %}" alt="Card image" class="card-image">
+                </a>
+                <h3 class="card-title">TRADE TALK</h3>
+                <p class="card-description">Business, Entrepreneurship and Startups.</p>
+            </div>
+            <div class="card">
+                <a href="{% url 'category_blogs' 'education' %}" class="card-image-link">
+                    <img src="{% static 'img/card8.jpeg' %}" alt="Card image" class="card-image">
+                </a>
+                <h3 class="card-title">LEARN LOOP</h3>
+                <p class="card-description">Education and Learning.</p>
+            </div>
+            <div class="card">
+                <a href="{% url 'category_blogs' 'health' %}" class="card-image-link">
+                    <img src="{% static 'img/card9.jpg' %}" alt="Card image" class="card-image">
+                </a>
+                <h3 class="card-title">FITFOLIO</h3>
+                <p class="card-description">Health and Fitness.</p>
+            </div>
+            <div class="card">
+                <a href="{% url 'category_blogs' 'fashion' %}" class="card-image-link">
+                    <img src="{% static 'img/card10.jpg' %}" alt="Card image" class="card-image">
+                </a>
+                <h3 class="card-title">GLAM GAZETTE</h3>
+                <p class="card-description">Fashion and Beauty.</p>
+            </div>
+            <div class="card">
+                <a href="{% url 'category_blogs' 'sports' %}" class="card-image-link">
+                    <img src="{% static 'img/card11.jpg' %}" alt="Card image" class="card-image">
+                </a>
+                <h3 class="card-title">PLAYBOOK PORTAL</h3>
+                <p class="card-description">Sports and Outdoor Activities.</p>
+            </div>
+            <div class="card">
+                <a href="{% url 'category_blogs' 'artistic' %}" class="card-image-link">
+                    <img src="{% static 'img/card12.jpg' %}" alt="Card image" class="card-image">
+                </a>
+                <h3 class="card-title">SHUTTER STORIES</h3>
+                <p class="card-description">Photography and Visual Arts.</p>
+            </div>
+            <div class="card">
+                <a href="{% url 'category_blogs' 'other' %}" class="card-image-link">
+                    <img src="{% static 'img/card6.jpg' %}" alt="Card image" class="card-image">
+                </a>
+                <h3 class="card-title">GENERAL</h3>
+                <p class="card-description">Blogs From Other Categories.</p>
+            </div>
+        </div>
+        <div class="button-group">
+            <a href="{% url 'main' %}" class="btn button-link">Back to Main Page</a>
+            <a href="{% url 'create_blog' %}" class="btn button-link">Create a Blog</a>
+        </div>
+    </section>
+</body>
+</html>

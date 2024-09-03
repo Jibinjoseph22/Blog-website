@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/edit_blog.css' %}">
+</head>
+<body>
+    <h1>Edit Blog</h1>
+    <form method="post" onsubmit="return prepareContent();">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="toolbar">
+            <button type="button" onclick="document.execCommand('bold', false, '');">B</button>
+            <button type="button" onclick="document.execCommand('italic', false, '');">I</button>
+            <button type="button" onclick="document.execCommand('underline', false, '');">U</button>
+            <button type="button" onclick="document.execCommand('insertUnorderedList', false, '');">UL</button>
+            <button type="button" onclick="document.execCommand('insertOrderedList', false, '');">OL</button>
+            <select onchange="changeFontSize(this.value)">
+                <option value="">Font Size</option>
+                <option value="1">Small</option>
+                <option value="3">Normal</option>
+                <option value="5">Large</option>
+                <option value="7">Huge</option>
+            </select>
+            <select onchange="changeFontStyle(this.value)">
+                <option value="">Font Style</option>
+                <option value="Arial">Arial</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Verdana">Verdana</option>
+            </select>
+        </div>
+        <div contenteditable="true" class="editor-content" id="content-editor">
+            {{ form.instance.content|safe }}
+        </div>
+        <textarea name="content" id="content-textarea" style="display: none;">{{ form.instance.content|safe }}</textarea>
+        <input type="hidden" name="status" id="status">
+        <div class="button-group">
+            <button type="submit" class="btn">Update Blog</button>
+            <a href="{% url 'blog_list' %}" class="btn button-link">Back to Blog List</a>
+            <a href="{% url 'main' %}" class="btn button-link">Back to Main Page</a>
+        </div>
+    </form>
+    <script>
+        function prepareContent() {
+            var editorContent = document.querySelector('.editor-content').innerHTML;
+            var textarea = document.querySelector('textarea[name="content"]');
+            textarea.value = editorContent;
+
+            // Check if content is empty
+            if (textarea.value.trim() === '') {
+                alert('Content cannot be empty');
+                return false; // Prevent form submission
+            }
+
+            // Set status if needed
+            document.getElementById('status').value = 'publish'; // Or any other value depending on the form action
+            return true; // Allow form submission
+        }
+
+        function changeFontSize(size) {
+            document.execCommand('fontSize', false, size);
+        }
+
+        function changeFontStyle(style) {
+            document.execCommand('fontName', false, style);
+        }
+    </script>
+</body>
+</html>

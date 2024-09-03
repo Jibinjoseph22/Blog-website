@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category Blogs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/category_blogs.css' %}">
+    <style>
+        .blog-content {
+            display: none;
+        }
+        .button-link {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blogs</h1>
+    <ul>
+        {% for blog in blogs %}
+            <li>
+                <h2>{{ blog.title }}</h2>
+                <p>Author: {{ blog.author.username }}</p>
+                <p>Category: {{ blog.get_category_display }}</p>
+                <p>Created at: {{ blog.created_at }}</p>
+                <p>Updated at: {{ blog.updated_at }}</p>
+                <button class="button-link" onclick="toggleContent('{{ blog.id }}')">Read Blog</button>
+                <div id="content-{{ blog.id }}" class="blog-content">
+                    <p>{{ blog.content|safe }}</p> <!-- Render HTML content safely -->
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="button-container">
+        <a href="{% url 'main' %}" class="btn">Back to Main Page</a>
+    </div>
+    <script>
+        function toggleContent(blogId) {
+            const contentDiv = document.getElementById(`content-${blogId}`);
+            if (contentDiv.style.display === "none" || contentDiv.style.display === "") {
+                contentDiv.style.display = "block";
+            } else {
+                contentDiv.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main_content.css' %}">
+</head>
+<body>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h3>WELCOME, {{ username|upper }}</h3>
+            <div class="info-box-container">
+                <img src="{% static 'img/im1.jpeg' %}" alt="Image" class="info-image">
+                <div class="info-box-group">
+                    <div class="info-box">
+                        <p class="p">
+                            "The first draft is just you telling yourself the story."
+                            <br> – Terry Pratchett                        </p>
+                    </div>
+                    <div class="info-box2">
+                        <p class="p">
+                            Welcome to The Blog Zone, your ultimate destination for exploring a universe of ideas, stories, and insights across a multitude of categories.
+                            From technology and travel to health, lifestyle, and beyond, our platform is dedicated to bringing you the best content from every corner of the blogosphere.
+                            Whether you're here to learn something new, find inspiration, or simply indulge in captivating reads, we've got you covered.
+                            Join our vibrant community of writers and readers as we delve into thought-provoking discussions, share expert advice, and celebrate the diversity of perspectives that make our world so fascinating. 
+                        </p>
+                    </div>
+                    <div class="info-box">
+                        <p class="p">
+                            "Either write something worth reading or do something worth writing."
+                            <br> – Benjamin Franklin                      </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
